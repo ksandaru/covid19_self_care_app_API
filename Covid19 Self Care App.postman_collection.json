@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "0dd84f2e-338d-4128-b97e-b7d806fb545b",
+		"name": "Covid19 Self Care App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "Step 1 - Admin makeAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nic\": \"134555434V\",\r\n    \"email\" : \"tombraider085@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/users/makeAccount/app-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users",
+								"makeAccount",
+								"app-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 2-  User submit data",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fullName",
+									"value": "fdsfsd",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "gfgfdgdf",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "gfdgfdgfd",
+									"type": "text"
+								},
+								{
+									"key": "nic",
+									"value": "123456789V",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2021-01-01",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "fds",
+									"type": "text"
+								},
+								{
+									"key": "district",
+									"value": "fgdf",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "fdsfdsfdf",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gayan@gmai.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/sjpee/OneDrive/Pictures/IMG_20200922_194446.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vaccine",
+			"item": [
+				{
+					"name": "Add new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Coax\",\r\n    \"description\":\"desc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/vaccine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vaccine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/vaccine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vaccine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/vaccine/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vaccine",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"name\":\"new \",\r\n    \"description\":\"desc new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/vaccine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vaccine"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vaccination",
+			"item": [
+				{
+					"name": "New Vaccination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userProfileId\" :1,\r\n    \"vaccineId\": 2,\r\n    \"dose\" :1,\r\n    \"vaccinationPlace\" :\"palce 2\",\r\n    \"dateTaken\" :\"2021-03-11\",\r\n    \"batchNumber\" :\"34343\",\r\n    \"remarks\" :\"dsfdsf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/vaccination",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vaccination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  byID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/vaccination/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vaccination",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/vaccination/1/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vaccination",
+								"1",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Vaccination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/vaccination/get-one/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vaccination",
+								"get-one",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/users/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user-profile-id by Login Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/users/my-user-profile-id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users",
+								"my-user-profile-id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,35 @@
+POST http://localhost:8081/api/auth
+Content-Type: application/json
+
+{
+    "username" :"231254244V",
+    "password" : "12345"
+}
+
+###
+
+POST http://localhost:8081/api/users/makeAccount/admin
+Content-Type: application/json
+
+{
+    "nic" :"963412924V",
+    "email" : "sanjaya@gmail.com"
+}
+
+###
+
+GET http://localhost:8081/api/users/get/1
+Content-Type: application/json
+
+{
+    "nic" :"002345111V",
+    "email" : "person2@gmail.com"
+}
+
+
+###
+GET http://localhost:8081/api/vaccination/4
+
+
+###
+GET http://localhost:8081/api/vaccine/all-statistics
