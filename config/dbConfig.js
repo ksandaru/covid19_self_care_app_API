@@ -1,10 +1,10 @@
-require("dotenv").config();
+
 
 module.exports = {
-  HOST: process.env.HOST,
-  USER: process.env.USER,
-  PASSWORD: "",
-  DB: process.env.DB,
+  HOST: "bxrml7q7voslrlrnuo3m-mysql.services.clever-cloud.com",
+  USER:  "upifebbwnidjlzqv",
+  PASSWORD: "FiNsqTby56e1ULbmzI6i",
+  DB:  "bxrml7q7voslrlrnuo3m",
   dialect: "mysql",
 
   pool: {
