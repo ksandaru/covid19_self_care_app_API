@@ -527,8 +527,8 @@ async function sendMail(user, mailType, subject, callback) {
     host: "smtp.gmail.com",
     secure: true,
     auth: {
-      user: "bindilshan255@gmail.com",
-      pass: "Binara12345",
+      user: "sachinsandeepa46@gmail.com",
+      pass: "sachin12345##",
     },
     tls: {
       rejectUnauthorized: false,
@@ -536,7 +536,7 @@ async function sendMail(user, mailType, subject, callback) {
   });
 
   let mailOptions = {
-    from: "bindilshan255@gmail.com", // sender address
+    from: "sachinsandeepa46@gmail.com", // sender address
     to: user.email, // list of receivers
     subject: subject, // Subject line
     html: customEmail(user.id, user.name, user.password, mailType),
